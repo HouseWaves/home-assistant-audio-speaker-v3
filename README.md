@@ -91,9 +91,11 @@ It sounded great!  But $250 / speaker was not what people wanted.
 
 ***My second project*** was a much lower cost version based on a commonly available single-driver speaker available on Amazon. [V2 - $60 DIY WiFi & BT audio speaker for Home Assistant, with ESP32 - Squeezelite or SendSpin : r/homeassistant](https://www.reddit.com/r/homeassistant/comments/1skggdr/v2_60_diy_wifi_bt_audio_speaker_for_home/)
 
-A very nice desktop-sized solution, albeit with limited power and frequency range, ideal for replicating in multiple rooms primarily for notifications and occasionally listening to music (or secondary rooms as part of a whole home, multi-room system) .  
+A very nice desktop-sized solution, albeit with limited power and frequency range, ideal for replicating in multiple rooms primarily for notifications and occasionally listening to music (or secondary rooms as part of a whole home, multi-room system).  
 
-***My third project (V3)*** 
+-------
+
+The following guide is to help you recreate the speaker from ***My third project (V3)*** 
 
 A dual-driver, bookshelf speaker capable of providing quality audio in a compact form factor.  
 
@@ -115,7 +117,7 @@ I've started a company, with a commitment to prioritize and provide DIY open-sou
 
 For individuals who prefer to purchase a speaker fully assembled and tested, well...that's the market I'd like to help with...I want to be the RATGDO for music enthusiasts looking for options that do not require subscriptions or proprietary applications.
 
-Please check out my site, [GetHouseWaves.com]()  to view available models - all based on the same components you'll find in my DIY guides.
+Please check out my site, [GetHouseWaves.com](https://gethousewaves.com/)  to view available models - all based on the same components you'll find in my DIY guides.
 
 
 
@@ -155,7 +157,7 @@ After posting the V2 build, many people asked for a US-based option to purchase 
 | ---- | ------------------------------------------------------------ | ---------- | ----- | ------------------------------------------------------------ |
 | 1    | [Riowois Passive Bookshelf Speakers](https://www.amazon.com/dp/B0CN8V8R6Q) | 2 cabinets | $39   | $20/speaker; <br/>need to buy outside the US? search for Riowois DS6500M |
 | 2    | [Sonocotta LOUDER ESP32 - Sold by Elecrow](https://tidd.ly/48waQqJ) <br/><br/>or<br/><br/> [Sonocotta LOUD ESP32 - Sold by Lectronz](https://lectronz.com/products/louder-esp32) | 1          | $32   | $24 + $8 from Elecrow<br/>ESP32 with integrated DAC & AMP; <br />- no Ethernet module; <br/>- optional $5 RPi case to protect the circuit board<br/>**buy two if modifying both speakers.** <br/> <br/>Elecrow based in China but delivers to US with much lower shipping & customs fees. <br/><br/>Lectronz is based in EU for purchasing directly from Andriy at Sonocotta <br/> <br/> no current US-based reseller, but I will sell in a kit if people would like this option |
-| 3    | [USB-C Panel Mount Cable](https://www.amazon.com/dp/B09HWSFRP1) | 1          | $12   | **buy two if modifying both speakers.**                      |
+| 3    | [USB-C Panel Mount Cable](https://www.amazon.com/dp/B0DRVKR5F4) | 1          | $15   | improved version since v2; the threaded portion is hidden inside the cabinet along with the retaining nut<br/>**buy two if modifying both speakers.** |
 | 4    | Optional back plate                                          | 1          | $2    | If you have access to a 3D printer, print the 1.5" square plate (STL file included).  <br/>Another option is to [order custom 3D printing from Elecrow](https://tidd.ly/4tkovc0) or similar DIY service company. They are as cheap as $2 for two, plus shipping<br/>Otherwise, you can just drill a small hole in the back of the cabinet for the cable.<br/><br /> **print two if modifying both speakers.** |
 |      |                                                              |            |       |                                                              |
 
@@ -255,7 +257,7 @@ After posting the V2 build, many people asked for a US-based option to purchase 
 
    *RECOMMENDED - WAIT before re-attaching the plate to the back of the speaker (using same screws that held the wire connector plate in place).  You will want the wiggle room in the cable later, to plug it into the ESP32 board while inside the cabinet.* 
 
-   NOTE - the photo shows a 90 degree "right angle" USB-C connector I used in the POC.  I do not recommend this option - it was an idea I had that made assembly more difficult. For this reason, the parts table provides a link to a cable that is NOT right angle connector. 
+   NOTE - the photo shows a 90 degree "right angle" USB-C connector I used in the POC.  I do not recommend this option - I thought the right angle would make it easier to loop the cable inside the cabinet, but it made the connecting the cable to the ESP32 more difficult. For this reason, the parts table provides a link to a cable that is NOT right angle connector. 
 
    OR
    
@@ -267,11 +269,6 @@ After posting the V2 build, many people asked for a US-based option to purchase 
 
 ![speaker-printed-back-plate-USB-C-cable](images/speaker-printed-back-plate-USB-C-cable.jpg)
 *Closeup of the USB-C connector cable and the 3D printed plate that replaces the original speaker wire plate.*
-
-
-
-![speaker-front-USB-C-cable-installed](images/speaker-front-USB-C-cable-installed.jpg)
-*USB-C connector cable now running through the cabinet and connected to Sonocotta ESP32 LOUDER.*
 
 
 
@@ -383,19 +380,19 @@ Also note - you are able to flash and reflash the ESP32 board with any of the av
 
 This is **Build #3** in a planned series of passive-to-active speaker conversions using ESP32 for multi-room audio using Music Assistant. 
 
-**Build #4** - SendSpin update was added to the V2 DIY guide last week.  
-I will update this DIY guide soon for SendSpin.
+**Build #4** - A [step-by-step installation guide to install ESPHome firmware](https://github.com/HouseWaves/home-assistant-audio-speaker-v2/blob/main/README%20-%20ESPHome%20with%20SendSpin%20Firmware.md) for SendSpin was added to the V2 DIY guide last week. You can use this same guide as only one step changes - that is the YAML configuration file you need to copy/edit/paste. Instead of selecting the SendSpin YAML file in the LOUD subdirectory, you will need the similar file from the LOUDER subdirectory.
+I will update this repo soon with the explicit directions and locations on the file needed, for those who would prefer to wait.
 
-**Build #5** was just completed this weekend, before publishing this guide. 
-I will pre-release the assembled speakers at GetHouseWaves before mid-May and release the DIY guide as soon as I have some time to author it. (probably end of May, possibly at the start of June.)
+**Build #5** was just completed this weekend (aka HouseWaves-Three).
+I will pre-release a limited quantity of assembled HW3 speakers at [GetHouseWaves.com](https://gethousewaves.com/) before the end of May and release the DIY guide for it, as soon as I have some free time to create it. (probably end of May, possibly at the start of June.)
 
 
 
 | Build | Speaker                                                      | Status          |
 | ----- | ------------------------------------------------------------ | --------------- |
-| #1    | Tozzi One + Sonocotta Louder ESP32                           | ✅ Complete      |
-| #2    | HouseWaves-One; Low-end, low-cost (sub $50) single driver speaker | ✅ Complete      |
-| #3    | Mid-range, mid-cost (sub$100), 2-way speaker                 | ✅ Complete      |
+| #1    | HouseWaves POC -  Tozzi One High Fidelity Speaker Kit for Home Assistant | ✅ Complete      |
+| #2    | HouseWaves-One: Low-cost (sub $50) single driver speaker     | ✅ Complete      |
+| #3    | HouseWaves-Two: Mid-range, mid-cost (sub$100), dual driver speaker | ✅ Complete      |
 | #4    | SendSpin firmware for use with HW-One and HW-Two speakers    | ✅ Complete      |
 | #5    | Higher-fidelity speaker, competitive option to Sonos for use with Home Assistant | 🔜 May/June 2026 |
 | #6    | smart speaker option, compatible with Home Assistant Voice Preview | 🔜 July 2026     |
